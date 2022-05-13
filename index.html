@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordsmith</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="main-container">
+    <main>
+
+      <h1>Wordsmith</h1>
+      <div id="main-header">
+        <div id="header-left-side">
+          <span class="main-header-text">Word</span>
+        </div>
+        <div id="header-right-side">
+          <span class="main-header-text">smith</span>
+        </div>
+      </div>
+
+      <section class="main-section">
+        <h2>Place your word</h2>
+        <div>
+          <label for="input-text">Write down a word or phrase</label>
+          <input type="text" id="input-text" name="input-text">
+          <input type="button" id="submit-button" value="check">
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2>Check the results</h2>
+        <div id="output-section">
+          <section class="sub-section">
+            <h3>Related</h3>
+            <div id="related-results">
+              <div class="loading-icon hidden"></div>
+              <ul class="results-list"></ul>
+            </div>
+          </section>
+          <section class="sub-section">
+            <h3>Rhymes</h3>
+            <div id="rhymes-results">
+              <div class="loading-icon hidden"></div>
+              <ul class="results-list"></ul>
+            </div>
+          </section>
+          <section class="sub-section">
+            <h3>Synonyms</h3>
+            <div id="synonyms-results">
+              <div class="loading-icon hidden"></div>
+              <ul class="results-list"></ul>
+            </div>
+          </section>
+          <section class="sub-section">
+            <h3>Antonyms</h3>
+            <div id="antonyms-results">
+              <div class="loading-icon hidden"></div>
+              <ul class="results-list"></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <div id="api-logo">
+        <p>App works with <a href="https://www.datamuse.com/api/" target="_blank" rel="noopener noreferrer">DATAMUSE API</a></p>
+        <a href="https://www.datamuse.com/api/" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.datamuse.com/api/datamuse-logo-rgb.png" alt="datamuse-logo">
+        </a>
+      </div>
+      
+    </main>
+  </div>
+</body>
+</html>

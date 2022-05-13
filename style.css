@@ -1,0 +1,260 @@
+
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* TYPOGRAPHY */
+
+html {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+a {
+  font-weight: 700;
+}
+
+.main-header-text {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#input-text,
+#submit-button {
+  font-size: 1.125rem;
+}
+
+#submit-button {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/* STRUCTURE */
+
+body {
+  background-color: hsl(6, 78%, 22%);
+}
+
+#main-container {
+  height: 100%;
+  padding: 2rem 1rem;
+  min-width: 300px;
+}
+
+.main-section {
+  background-color: hsl(24, 100%, 93%);
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px hsl(0, 0%, 0%);
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 1rem;
+}
+
+.sub-section {
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+
+/* MODULES */
+
+#input-text {
+  border-radius: 5px;
+  margin: .25rem 0;
+  padding: .75rem;
+  width: 100%;
+}
+
+#submit-button {
+  background-color: hsl(135, 100%, 20%);
+  border-color: hsl(135, 50%, 20%);
+  border-radius: 5px;
+  color: hsl(135, 100%, 95%);
+  cursor: pointer;
+  padding: .25rem .5rem;
+  transition: all .2s ease-out;
+  width: 50%;
+}
+
+#submit-button:hover {
+  color: hsl(135, 100%, 20%);
+  background-color: hsl(135, 100%, 95%);
+}
+
+@media only screen and (min-width: 600px) {
+  #submit-button {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #submit-button {
+    padding: .5rem;
+  }
+}
+
+
+/* PAGE */
+
+#main-header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+#header-left-side {
+  background-color: hsl(24, 100%, 93%);
+  color: hsl(213, 100%, 21%);
+  padding: .5rem 0 .5rem 1rem;
+}
+
+#header-right-side {
+  background-color: hsl(213, 100%, 21%);
+  border: 2px solid hsl(24, 80%, 93%);
+  color: hsl(24, 80%, 93%);
+  height: 100px;
+  padding: .5rem 1rem .5rem .25rem;
+}
+
+.sub-section {
+  color: hsl(24, 80%, 93%);
+  padding: .5rem;
+}
+
+.sub-section h3 {
+  padding-bottom: .5rem;
+}
+
+.sub-section ul {
+  color: hsl(0, 0%, 0%);
+  list-style: none;
+}
+
+.sub-section ul > li {
+  color: hsl(0, 0%, 0%);
+  list-style: none;
+  padding: .25rem;
+}
+
+.sub-section:nth-of-type(even) {
+  background-color: hsl(213, 100%, 21%);
+}
+
+.sub-section:nth-of-type(even) li:nth-of-type(even) {
+  background-color: hsl(213, 80%, 93%);
+}
+
+.sub-section:nth-of-type(even) li:nth-of-type(odd) {
+  background-color: hsl(213, 80%, 85%);
+}
+
+.sub-section:nth-of-type(odd) {
+  background-color: hsl(24, 100%, 21%);
+}
+
+.sub-section:nth-of-type(odd) li:nth-of-type(even) {
+  background-color: hsl(24, 80%, 93%);
+}
+
+.sub-section:nth-of-type(odd) li:nth-of-type(odd) {
+  background-color: hsl(24, 80%, 85%);
+}
+
+@keyframes spinAround {
+  from  { transform: rotate(0deg) }
+  to    { transform: rotate(359deg) }
+}
+
+.loading-icon {
+  animation: spinAround 2s linear infinite;
+  border: 6px solid hsl(135, 80%, 70%);
+  border-left-color: hsl(135, 80%, 20%);
+  border-radius: 50%;
+  height: 2rem;
+  margin: 0 auto;
+  width: 2rem;
+}
+
+@keyframes fadeIn {
+  from  { opacity: 0 }
+  to    { opacity: 1 }
+}
+
+.fade-in {
+  animation: fadeIn .2s linear forwards;
+}
+
+#api-logo {
+  align-items: center;
+  background-color: hsl(24, 100%, 95%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 150px auto 0 auto;
+  max-width: 290px;
+  padding-top: 1rem;
+}
+
+img {
+  width: 150px;
+}
+
+@media only screen and (min-width: 600px) {
+  #output-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .sub-section {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #output-section {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+
+/* HELPERS */
+
+.hidden {
+  display: none;
+}
+
+.display-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
